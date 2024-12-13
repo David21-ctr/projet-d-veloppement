@@ -1,0 +1,89 @@
+main {
+  width: 85%;
+  margin: 0 auto 30px;
+  background: $grey2;
+  .section-1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+  img {
+    width: 100%;
+  }
+
+  span {
+    padding: 80px 80px;
+    position: relative;
+    display: block;
+
+    &:before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 37%;
+      height: 1px;
+      background: $grey3;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media screen and (max-width: 700px) {
+        width: 30%;
+      }
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+  h2 {
+    @include title;
+    font-size: 3rem;
+    @media screen and(max-width: 700px) {
+      font-size: 2rem;
+    }
+  }
+  p {
+    width: 60%;
+    margin: 30px auto;
+    line-height: 35px;
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+  .btn {
+    margin: 50px 0 90px;
+  }
+  .section-2 {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-top: 1px solid $grey3;
+
+    img {
+      width: 80%;
+      height: 250px;
+      width: 350px;
+    }
+    p {
+      width: 80%;
+      width: 350px;
+      text-align: left;
+    }
+
+    h3 {
+      @include title;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      max-width: 70%;
+      margin: 0 auto 30px;
+    }
+    .left-part {
+      height: 100%;
+      border-right: 1px solid $grey3;
+    }
+    .left-part,
+    .right-part {
+      padding: 60px;
+    }
+  }
+}
